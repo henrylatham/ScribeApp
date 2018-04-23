@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/ReactCommon/jschelpers/Unicode.h
+  /Users/henrylatham/ScribeApp/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
+  /Users/henrylatham/ScribeApp/node_modules/react-native/ReactCommon/jschelpers/Unicode.h

@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.m \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h
+  /Users/henrylatham/ScribeApp/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.m \
+  /Users/henrylatham/ScribeApp/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h

@@ -1,21 +1,21 @@
 dependencies: \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/Libraries/Text/RCTText.m \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/Libraries/Text/RCTText.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/Libraries/Text/RCTShadowText.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h
+  /Users/henrylatham/ScribeApp/node_modules/react-native/Libraries/Text/RCTText.m \
+  /Users/henrylatham/ScribeApp/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/henrylatham/ScribeApp/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h

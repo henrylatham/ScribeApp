@@ -1,3 +1,2 @@
-dependencies: \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/notes/main.m \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/notes/AppDelegate.h
+dependencies: /Users/henrylatham/ScribeApp/ios/notes/main.m \
+  /Users/henrylatham/ScribeApp/ios/notes/AppDelegate.h

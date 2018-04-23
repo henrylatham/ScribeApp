@@ -1,5 +1,4 @@
-dependencies: \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/notesTests/notesTests.m \
+dependencies: /Users/henrylatham/ScribeApp/ios/notesTests/notesTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h \
@@ -35,14 +34,14 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/henrylatham/ScribeApp/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

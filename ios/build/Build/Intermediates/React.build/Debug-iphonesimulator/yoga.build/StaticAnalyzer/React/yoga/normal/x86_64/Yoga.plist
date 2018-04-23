@@ -6,7 +6,7 @@
 <string>Apple LLVM version 8.1.0 (clang-802.0.42)</string>
  <key>files</key>
  <array>
-  <string>/Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.c</string>
+  <string>/Users/henrylatham/ScribeApp/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.c</string>
  </array>
  <key>diagnostics</key>
  <array>

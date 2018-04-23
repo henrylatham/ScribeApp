@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/ReactCommon/jschelpers/systemJSCWrapper.cpp \
-  /Users/henrylatham/aws-mobile-react-native-notes-tutorial/node_modules/react-native/React/../ReactCommon/jschelpers/JSCWrapper.h
+  /Users/henrylatham/ScribeApp/node_modules/react-native/ReactCommon/jschelpers/systemJSCWrapper.cpp \
+  /Users/henrylatham/ScribeApp/node_modules/react-native/React/../ReactCommon/jschelpers/JSCWrapper.h
