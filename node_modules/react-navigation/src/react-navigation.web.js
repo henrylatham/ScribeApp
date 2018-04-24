@@ -1,3 +1,7 @@
+/*
+ * @noflow - get/set properties not yet supported by flow. also `...require(x)` is broken #6560135
+ */
+
 /* eslint global-require: 0 */
 
 module.exports = {
@@ -31,8 +35,5 @@ module.exports = {
   // HOCs
   get withNavigation() {
     return require('./views/withNavigation').default;
-  },
-  get withNavigationFocus() {
-    return require('./views/withNavigationFocus').default;
   },
 };

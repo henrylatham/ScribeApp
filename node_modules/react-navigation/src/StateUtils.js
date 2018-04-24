@@ -1,4 +1,8 @@
+/* @flow */
+
 import invariant from './utils/invariant';
+
+import type { NavigationRoute, NavigationState } from './TypeDefinition';
 
 /**
  * Utilities to perform atomic operation with navigate state and routes.
@@ -12,24 +16,24 @@ const StateUtils = {
   /**
    * Gets a route by key. If the route isn't found, returns `null`.
    */
-  get(state, key) {
-    return state.routes.find(route => route.key === key) || null;
+  get(state: NavigationState, key: string): ?NavigationRoute {
+    return state.routes.find((route: *) => route.key === key) || null;
   },
 
   /**
    * Returns the first index at which a given route's key can be found in the
    * routes of the navigation state, or -1 if it is not present.
    */
-  indexOf(state, key) {
-    return state.routes.map(route => route.key).indexOf(key);
+  indexOf(state: NavigationState, key: string): number {
+    return state.routes.map((route: *) => route.key).indexOf(key);
   },
 
   /**
    * Returns `true` at which a given route's key can be found in the
    * routes of the navigation state.
    */
-  has(state, key) {
-    return !!state.routes.some(route => route.key === key);
+  has(state: NavigationState, key: string): boolean {
+    return !!state.routes.some((route: *) => route.key === key);
   },
 
   /**
@@ -37,7 +41,7 @@ const StateUtils = {
    * Note that this moves the index to the positon to where the last route in the
    * stack is at.
    */
-  push(state, route) {
+  push(state: NavigationState, route: NavigationRoute): NavigationState {
     invariant(
       StateUtils.indexOf(state, route.key) === -1,
       'should not push route with duplicated key %s',
@@ -59,7 +63,7 @@ const StateUtils = {
    * Note that this moves the index to the positon to where the last route in the
    * stack is at.
    */
-  pop(state) {
+  pop(state: NavigationState): NavigationState {
     if (state.index <= 0) {
       // [Note]: Over-popping does not throw error. Instead, it will be no-op.
       return state;
@@ -75,7 +79,7 @@ const StateUtils = {
   /**
    * Sets the focused route of the navigation state by index.
    */
-  jumpToIndex(state, index) {
+  jumpToIndex(state: NavigationState, index: number): NavigationState {
     if (index === state.index) {
       return state;
     }
@@ -91,7 +95,7 @@ const StateUtils = {
   /**
    * Sets the focused route of the navigation state by key.
    */
-  jumpTo(state, key) {
+  jumpTo(state: NavigationState, key: string): NavigationState {
     const index = StateUtils.indexOf(state, key);
     return StateUtils.jumpToIndex(state, index);
   },
@@ -99,7 +103,7 @@ const StateUtils = {
   /**
    * Sets the focused route to the previous route.
    */
-  back(state) {
+  back(state: NavigationState): NavigationState {
     const index = state.index - 1;
     const route = state.routes[index];
     return route ? StateUtils.jumpToIndex(state, index) : state;
@@ -108,7 +112,7 @@ const StateUtils = {
   /**
    * Sets the focused route to the next route.
    */
-  forward(state) {
+  forward(state: NavigationState): NavigationState {
     const index = state.index + 1;
     const route = state.routes[index];
     return route ? StateUtils.jumpToIndex(state, index) : state;
@@ -119,7 +123,11 @@ const StateUtils = {
    * Note that this moves the index to the positon to where the new route in the
    * stack is at.
    */
-  replaceAt(state, key, route) {
+  replaceAt(
+    state: NavigationState,
+    key: string,
+    route: NavigationRoute
+  ): NavigationState {
     const index = StateUtils.indexOf(state, key);
     return StateUtils.replaceAtIndex(state, index, route);
   },
@@ -129,7 +137,11 @@ const StateUtils = {
    * Note that this moves the index to the positon to where the new route in the
    * stack is at.
    */
-  replaceAtIndex(state, index, route) {
+  replaceAtIndex(
+    state: NavigationState,
+    index: number,
+    route: NavigationRoute
+  ): NavigationState {
     invariant(
       !!state.routes[index],
       'invalid index %s for replacing route %s',
@@ -156,16 +168,20 @@ const StateUtils = {
    * Note that this moves the index to the positon to where the last route in the
    * stack is at if the param `index` isn't provided.
    */
-  reset(state, routes, index) {
+  reset(
+    state: NavigationState,
+    routes: Array<NavigationRoute>,
+    index?: number
+  ): NavigationState {
     invariant(
       routes.length && Array.isArray(routes),
       'invalid routes to replace'
     );
 
-    const nextIndex = index === undefined ? routes.length - 1 : index;
+    const nextIndex: number = index === undefined ? routes.length - 1 : index;
 
     if (state.routes.length === routes.length && state.index === nextIndex) {
-      const compare = (route, ii) => routes[ii] === route;
+      const compare = (route: *, ii: *) => routes[ii] === route;
       if (state.routes.every(compare)) {
         return state;
       }
