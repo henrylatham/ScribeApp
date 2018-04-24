@@ -1,6 +1,11 @@
-import React from 'react';
-import { BackHandler, View } from 'react-native';
+/* @flow */
 
-const MaskedViewIOS = () => <View>{this.props.children}</View>;
+export const Linking = {
+  addEventListener: () => {},
+  removeEventListener: () => {},
+  getInitialURL: () => Promise.reject('Unsupported platform'),
+};
 
-export { BackHandler, MaskedViewIOS };
+export const BackHandler = {
+  addEventListener: () => {},
+};

@@ -1,3 +1,6 @@
+/*
+ * @flow
+ */
 import invariant from '../utils/invariant';
 
 export default () =>

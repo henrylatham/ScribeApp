@@ -1,9 +1,11 @@
+/* @flow */
+
 import {
   BackAndroid as DeprecatedBackAndroid,
   BackHandler as ModernBackHandler,
-  MaskedViewIOS,
+  Linking,
 } from 'react-native';
 
 const BackHandler = ModernBackHandler || DeprecatedBackAndroid;
 
-export { BackHandler, MaskedViewIOS };
+export { BackHandler, Linking };

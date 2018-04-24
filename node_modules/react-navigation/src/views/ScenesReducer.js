@@ -1,12 +1,20 @@
+/* @flow */
+
 import invariant from '../utils/invariant';
 import shallowEqual from '../utils/shallowEqual';
+
+import type {
+  NavigationRoute,
+  NavigationScene,
+  NavigationState,
+} from '../TypeDefinition';
 
 const SCENE_KEY_PREFIX = 'scene_';
 
 /**
  * Helper function to compare route keys (e.g. "9", "11").
  */
-function compareKey(one, two) {
+function compareKey(one: string, two: string): number {
   const delta = one.length - two.length;
   if (delta > 0) {
     return 1;
@@ -20,7 +28,7 @@ function compareKey(one, two) {
 /**
  * Helper function to sort scenes based on their index and view key.
  */
-function compareScenes(one, two) {
+function compareScenes(one: NavigationScene, two: NavigationScene): number {
   if (one.index > two.index) {
     return 1;
   }
@@ -34,7 +42,10 @@ function compareScenes(one, two) {
 /**
  * Whether two routes are the same.
  */
-function areScenesShallowEqual(one, two) {
+function areScenesShallowEqual(
+  one: NavigationScene,
+  two: NavigationScene
+): boolean {
   return (
     one.key === two.key &&
     one.index === two.index &&
@@ -47,7 +58,10 @@ function areScenesShallowEqual(one, two) {
 /**
  * Whether two routes are the same.
  */
-function areRoutesShallowEqual(one, two) {
+function areRoutesShallowEqual(
+  one: ?NavigationRoute,
+  two: ?NavigationRoute
+): boolean {
   if (!one || !two) {
     return one === two;
   }
@@ -59,17 +73,21 @@ function areRoutesShallowEqual(one, two) {
   return shallowEqual(one, two);
 }
 
-export default function ScenesReducer(scenes, nextState, prevState) {
+export default function ScenesReducer(
+  scenes: Array<NavigationScene>,
+  nextState: NavigationState,
+  prevState: ?NavigationState
+): Array<NavigationScene> {
   if (prevState === nextState) {
     return scenes;
   }
 
-  const prevScenes = new Map();
-  const freshScenes = new Map();
-  const staleScenes = new Map();
+  const prevScenes: Map<string, NavigationScene> = new Map();
+  const freshScenes: Map<string, NavigationScene> = new Map();
+  const staleScenes: Map<string, NavigationScene> = new Map();
 
   // Populate stale scenes from previous scenes marked as stale.
-  scenes.forEach(scene => {
+  scenes.forEach((scene: *) => {
     const { key } = scene;
     if (scene.isStale) {
       staleScenes.set(key, scene);
@@ -78,7 +96,7 @@ export default function ScenesReducer(scenes, nextState, prevState) {
   });
 
   const nextKeys = new Set();
-  nextState.routes.forEach((route, index) => {
+  nextState.routes.forEach((route: *, index: *) => {
     const key = SCENE_KEY_PREFIX + route.key;
     const scene = {
       index,
@@ -104,7 +122,7 @@ export default function ScenesReducer(scenes, nextState, prevState) {
 
   if (prevState) {
     // Look at the previous routes and classify any removed scenes as `stale`.
-    prevState.routes.forEach((route, index) => {
+    prevState.routes.forEach((route: NavigationRoute, index: *) => {
       const key = SCENE_KEY_PREFIX + route.key;
       if (freshScenes.has(key)) {
         return;
@@ -121,7 +139,7 @@ export default function ScenesReducer(scenes, nextState, prevState) {
 
   const nextScenes = [];
 
-  const mergeScene = nextScene => {
+  const mergeScene = (nextScene: *) => {
     const { key } = nextScene;
     const prevScene = prevScenes.has(key) ? prevScenes.get(key) : null;
     if (prevScene && areScenesShallowEqual(prevScene, nextScene)) {
@@ -139,7 +157,7 @@ export default function ScenesReducer(scenes, nextState, prevState) {
   nextScenes.sort(compareScenes);
 
   let activeScenesCount = 0;
-  nextScenes.forEach((scene, ii) => {
+  nextScenes.forEach((scene: *, ii: *) => {
     const isActive = !scene.isStale && scene.index === nextState.index;
     if (isActive !== scene.isActive) {
       nextScenes[ii] = {
@@ -164,7 +182,7 @@ export default function ScenesReducer(scenes, nextState, prevState) {
 
   if (
     nextScenes.some(
-      (scene, index) => !areScenesShallowEqual(scenes[index], scene)
+      (scene: *, index: *) => !areScenesShallowEqual(scenes[index], scene)
     )
   ) {
     return nextScenes;

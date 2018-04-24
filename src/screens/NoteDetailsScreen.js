@@ -83,6 +83,15 @@ const styles = StyleSheet.create({
     infoText: {
         fontSize: 10,
         color: '#808080'
+    },
+
+    wordCountText: {
+        fontSize: 14,
+        marginRight: 16
+    },
+
+    wordCountReached: {
+        color: 'green'
     }
 });
 
@@ -93,14 +102,24 @@ const styles = StyleSheet.create({
  * @extends {React.Component}
  */
 class NoteDetails extends React.Component {
-    static navigationOptions = {
-        /**title:'Note Details',*/
-        headerStyle: {
-            backgroundColor: theme.headerBackgroundColor
-        },
-        headerTintColor: theme.actionButtonColor
-    };
+    static navigationOptions = ({ navigation }) => {
+        const { state } = navigation;
+        const wordCount = state.params && state.params.wordCount || 0;
+        const reachedCount = wordCount && wordCount > 250;
 
+        return {
+            /**title:'Note Details',*/
+            headerStyle: {
+                backgroundColor: theme.headerBackgroundColor
+            },
+            headerTintColor: theme.actionButtonColor,
+            headerRight: (
+                <Text style={[ styles.wordCountText, reachedCount && styles.wordCountReached ]}>
+                    { wordCount } / 250
+                </Text>
+            )
+        }
+    }
     /**
      * Constructor - loads the note from the store.
      *
@@ -112,6 +131,11 @@ class NoteDetails extends React.Component {
         this.state = {
             note: props.note || this.blankNote(props.navigation.state.params.noteId)
         }
+    }
+
+    componentDidMount() {
+        // update word count
+        this.updateWordCount(this.state.note.content)
     }
 
     /**
@@ -138,6 +162,16 @@ class NoteDetails extends React.Component {
         const note = Object.assign({}, this.state.note);    // turn state into a mutable object
         note[field] = text;
         this.setState({ note });
+    }
+
+    /**
+     * update word count in title
+     * @param {string} text 
+     */
+    updateWordCount(text) {
+        const matches =  text.match(/\S+/g);
+        const count = matches ? matches.length : 0;
+        this.props.navigation.setParams({ wordCount: count });
     }
 
     /**
@@ -185,7 +219,10 @@ class NoteDetails extends React.Component {
                     <TextInput {...textFieldParams}
                         style={styles.bodyInput}
                         autoCapitalize="sentences"
-                        onChangeText={text => this.onChangeField(text, 'content')}
+                        onChangeText={text => {
+                            this.onChangeField(text, 'content');
+                            this.updateWordCount(text);
+                        }}
                         placeholder="Write Here"
                         multiline={true}
                         value={this.state.note.content} />
