@@ -59,15 +59,15 @@ const noteItemStyles = StyleSheet.create({
         marginRight: 16,
         marginTop: 16
     },
-    info: {
-        color: '#C0C0C0',
+    content: {
+        color: '#C2BCC5',
         fontSize: 14
     },
-    infoContainer: {
+    contentContainer: {
         flexBasis: 'auto'
     },
     title: {
-        color: theme.secondaryColor,
+        color: '#353535',
         fontSize: 20
     },
     titleContainer: {
@@ -100,10 +100,10 @@ const NoteListItem = (props) => {
         <Touchable onPress={onPress}>
             <View style={noteItemStyles.container}>
                 <View style={noteItemStyles.titleContainer}>
-                    <Text style={noteItemStyles.title}>{props.item.title}</Text>
+                    <Text numberOfLines={1} style={noteItemStyles.title}>{props.item.title}</Text>
                 </View>
-                <View style={noteItemStyles.infoContainer}>
-                    <Text style={noteItemStyles.info}>{props.item.noteId}</Text>
+                <View style={noteItemStyles.contentContainer}>
+                    <Text numberOfLines={2} style={noteItemStyles.content}>{props.item.content}</Text>
                 </View>
             </View>
         </Touchable>
