@@ -5,7 +5,8 @@ import {
     Text,
     TextInput,
     View,
-    ScrollView
+    ScrollView,
+    Picker
 } from 'react-native';
 import Loading from './Loading';
 import theme from '../theme';
@@ -58,7 +59,22 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
     },
 
-    numberContainer: {
+    ratingPicker: {
+      width: 64,
+      height: 24,
+      textAlign:'center',
+    },
+
+    ratingItem: {
+      fontSize: 12,
+      borderRadius: 2,
+      borderWidth: 1,
+      borderColor: '#C2BCC5',
+      backgroundColor: '#FAFAFA',
+      height: 40,
+    },
+
+    ratingContainer: {
       width: 80,
       flex: 1,
       flexDirection: 'column',
@@ -66,18 +82,6 @@ const styles = StyleSheet.create({
       marginLeft: 16,
       marginRight: 16,
       marginBottom: 32,
-    },
-
-    numberInput: {
-      fontSize: 14,
-      borderRadius: 2,
-      borderWidth: 1,
-      borderColor: '#C2BCC5',
-      width: 32,
-      textAlign:'center',
-      backgroundColor: '#FAFAFA',
-      height: 24,
-      marginTop: 8,
     },
 
     infoText: {
@@ -166,12 +170,20 @@ class NoteDetails extends React.Component {
 
     /**
      * update word count in title
-     * @param {string} text 
+     * @param {string} text
      */
     updateWordCount(text) {
         const matches =  text.match(/\S+/g);
         const count = matches ? matches.length : 0;
         this.props.navigation.setParams({ wordCount: count });
+    }
+
+
+    /** Set rating default */
+    handleChangeOption(val) {
+      if (val !== 0) {
+        this.setState({selectedValue: val});
+      }
     }
 
     /**
@@ -228,33 +240,21 @@ class NoteDetails extends React.Component {
                         value={this.state.note.content} />
                 </View>
                 <View style={styles.ratingSection}>
-                  <View style={[styles.fieldContainer, styles.numberContainer]}>
+                  <View style={[styles.fieldContainer, styles.ratingContainer]}>
                       <Text>Mood:</Text>
-                      <TextInput {...textFieldParams}
-                          style={styles.numberInput}
-                          onChangeText={text => this.onChangeField(text, 'firstRating')}
-                          placeholder="0"
-                          multiline={false}
-                          value={this.state.note.firstRating} />
+                      <Picker
+                        selectedValue={this.state.rating}
+                        style={styles.ratingPicker}
+                        itemStyle={styles.ratingItem}
+                        onValueChange={this.handleChangeOption}
+                        >
+                          <Picker.Item label="Select" style={{opacity: 0.54,}} value="0" />
+                          <Picker.Item label=":(" value="1" />
+                          <Picker.Item label=":|" value="2" />
+                          <Picker.Item label=":)" value="3" />
+                      </Picker>
                   </View>
-                  <View style={[styles.fieldContainer, styles.numberContainer]}>
-                      <Text>Sleep:</Text>
-                      <TextInput {...textFieldParams}
-                          style={styles.numberInput}
-                          onChangeText={text => this.onChangeField(text, 'secondRating')}
-                          placeholder="0"
-                          multiline={false}
-                          value={this.state.note.secondRating} />
-                  </View>
-                  <View style={[styles.fieldContainer, styles.numberContainer]}>
-                      <Text>Energy:</Text>
-                      <TextInput {...textFieldParams}
-                          style={styles.numberInput}
-                          onChangeText={text => this.onChangeField(text, 'thirdRating')}
-                          placeholder="0"
-                          multiline={false}
-                          value={this.state.note.thirdRating} />
-                  </View>
+
                 </View>
             </ScrollView>
         );
