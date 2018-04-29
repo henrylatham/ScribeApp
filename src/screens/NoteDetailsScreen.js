@@ -6,10 +6,11 @@ import {
     TextInput,
     View,
     ScrollView,
-    Picker
+    Picker,
 } from 'react-native';
 import Loading from './Loading';
 import theme from '../theme';
+import ModalDropdown from 'react-native-modal-dropdown';
 
 //BEGIN-REDUX
 import { connect } from 'react-redux';
@@ -38,9 +39,10 @@ const styles = StyleSheet.create({
     contentContainer: {
         flexGrow: 1
     },
-    infoContainer: {
 
+    infoContainer: {
     },
+
     titleInput: {
         borderBottomWidth: 1,
         borderBottomColor: theme.fieldIdColor,
@@ -52,26 +54,11 @@ const styles = StyleSheet.create({
       marginBottom: 264,
     },
 
+
     ratingSection: {
-      flex: 1,
       flexDirection: 'row',
       width: '100%',
       backgroundColor: 'white',
-    },
-
-    ratingPicker: {
-      width: 64,
-      height: 24,
-      textAlign:'center',
-    },
-
-    ratingItem: {
-      fontSize: 12,
-      borderRadius: 2,
-      borderWidth: 1,
-      borderColor: '#C2BCC5',
-      backgroundColor: '#FAFAFA',
-      height: 40,
     },
 
     ratingContainer: {
@@ -79,10 +66,30 @@ const styles = StyleSheet.create({
       flex: 1,
       flexDirection: 'column',
       alignItems: 'center',
+    },
+
+    selectRatingButton: {
+      fontSize: 20,
+      marginTop: 4,
       marginLeft: 16,
       marginRight: 16,
       marginBottom: 32,
     },
+
+    selectRatingText: {
+      fontSize: 12,
+      opacity: 0.54,
+    },
+
+    selectRatingContainer: {
+      borderRadius: 2,
+      borderWidth: 1,
+      borderColor: '#C2BCC5',
+      backgroundColor: '#FAFAFA',
+      height: 112,
+      width: 80,
+    },
+
 
     infoText: {
         fontSize: 10,
@@ -179,12 +186,10 @@ class NoteDetails extends React.Component {
     }
 
 
-    /** Set rating default */
-    handleChangeOption(val) {
-      if (val !== 0) {
-        this.setState({selectedValue: val});
-      }
-    }
+
+    /** Set rating defaultValue */
+
+
 
     /**
      * React lifecycle method that is called when the view is closed.  This will
@@ -217,6 +222,7 @@ class NoteDetails extends React.Component {
             return <Loading/>;
         }
 
+
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.fieldContainer}>
@@ -242,17 +248,11 @@ class NoteDetails extends React.Component {
                 <View style={styles.ratingSection}>
                   <View style={[styles.fieldContainer, styles.ratingContainer]}>
                       <Text>Mood:</Text>
-                      <Picker
-                        selectedValue={this.state.rating}
-                        style={styles.ratingPicker}
-                        itemStyle={styles.ratingItem}
-                        onValueChange={this.handleChangeOption}
-                        >
-                          <Picker.Item label="Select" style={{opacity: 0.54,}} value="0" />
-                          <Picker.Item label=":(" value="1" />
-                          <Picker.Item label=":|" value="2" />
-                          <Picker.Item label=":)" value="3" />
-                      </Picker>
+                      <ModalDropdown
+                        style={styles.selectRatingButton}
+                        textStyle={styles.selectRatingText}
+                        dropdownStyle={styles.selectRatingContainer}
+                        options={['Good', 'Fine', 'Bad']}/>
                   </View>
 
                 </View>
