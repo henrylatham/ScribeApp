@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 0,
-        fontSize: 32
+        fontSize: 32,
+        // fontFamily: "hkGrotesk"
     },
     contentContainer: {
         flexGrow: 1
