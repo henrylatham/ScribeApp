@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Loading from './Loading';
 import theme from '../theme';
+import HKGroteskBoldLegacy from '/Users/henrylatham/ScribeApp/assets/fonts/HK Grotesk Bold Legacy.ttf'
 import ModalDropdown from 'react-native-modal-dropdown';
 
 //BEGIN-REDUX
@@ -35,7 +36,6 @@ const styles = StyleSheet.create({
         paddingRight: 16,
         paddingBottom: 0,
         fontSize: 32,
-        // fontFamily: "hkGrotesk"
     },
     contentContainer: {
         flexGrow: 1
@@ -49,6 +49,8 @@ const styles = StyleSheet.create({
         borderBottomColor: theme.fieldIdColor,
         fontSize: 24,
         paddingTop: 16,
+        // Imported font not recognized
+        // fontFamily: "HKGroteskBoldLegacy"
     },
     bodyInput: {
       fontSize: 14,

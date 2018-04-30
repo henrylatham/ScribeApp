@@ -48,6 +48,8 @@
 		010F2C7BCD1449DDB70467AE /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78BC9BBE06474DB4AE97E74A /* Octicons.ttf */; };
 		26D89654EFD241E7BBB3AC5A /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D35EA1B789477AA286B89E /* SimpleLineIcons.ttf */; };
 		84FD5995F13E4DBFAD9BB912 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA8F29AC0AF2448FAFA4FA88 /* Zocial.ttf */; };
+		F66652B1CD874A6090529663 /* HK Grotesk Bold Legacy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 917E53A0EFDC4727AB96BCC1 /* HK Grotesk Bold Legacy.ttf */; };
+		17FB51CF539A45A7844655E2 /* HK Grotesk Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58A540013DD1432A8F7150B2 /* HK Grotesk Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +290,8 @@
 		78BC9BBE06474DB4AE97E74A /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		90D35EA1B789477AA286B89E /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AA8F29AC0AF2448FAFA4FA88 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		917E53A0EFDC4727AB96BCC1 /* HK Grotesk Bold Legacy.ttf */ = {isa = PBXFileReference; name = "HK Grotesk Bold Legacy.ttf"; path = "../assets/fonts/HK Grotesk Bold Legacy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58A540013DD1432A8F7150B2 /* HK Grotesk Regular.ttf */ = {isa = PBXFileReference; name = "HK Grotesk Regular.ttf"; path = "../assets/fonts/HK Grotesk Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +550,8 @@
 				78BC9BBE06474DB4AE97E74A /* Octicons.ttf */,
 				90D35EA1B789477AA286B89E /* SimpleLineIcons.ttf */,
 				AA8F29AC0AF2448FAFA4FA88 /* Zocial.ttf */,
+				917E53A0EFDC4727AB96BCC1 /* HK Grotesk Bold Legacy.ttf */,
+				58A540013DD1432A8F7150B2 /* HK Grotesk Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -931,6 +937,8 @@
 				010F2C7BCD1449DDB70467AE /* Octicons.ttf in Resources */,
 				26D89654EFD241E7BBB3AC5A /* SimpleLineIcons.ttf in Resources */,
 				84FD5995F13E4DBFAD9BB912 /* Zocial.ttf in Resources */,
+				F66652B1CD874A6090529663 /* HK Grotesk Bold Legacy.ttf in Resources */,
+				17FB51CF539A45A7844655E2 /* HK Grotesk Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
